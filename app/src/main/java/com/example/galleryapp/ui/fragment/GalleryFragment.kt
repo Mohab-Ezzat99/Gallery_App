@@ -1,6 +1,5 @@
 package com.example.galleryapp.ui.fragment
 
-import UnSplashPhotoAdapter
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -23,7 +22,10 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
 
         binding.apply {
             FGalleryRv.setHasFixedSize(true)
-            FGalleryRv.adapter = adapter
+            FGalleryRv.adapter = adapter.withLoadStateHeaderAndFooter(
+                header = UnSplashPhotoLoadStateAdapter { adapter.retry() },
+                footer = UnSplashPhotoLoadStateAdapter { adapter.retry() }
+            )
         }
 
         viewModel.photos.observe(viewLifecycleOwner) {

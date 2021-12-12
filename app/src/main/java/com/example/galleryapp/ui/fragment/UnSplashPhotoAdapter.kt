@@ -1,3 +1,5 @@
+package com.example.galleryapp.ui.fragment
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
