@@ -17,6 +17,6 @@ interface UnSplashApi {
     suspend fun searchPhotos(
         @Query("query") query: String,
         @Query("page") page: Int,
-        @Query("per_page") perPage: String,
+        @Query("per_page") perPage: Int
     ) :UnSplashResponse
 }
