@@ -1,4 +1,4 @@
-package com.example.galleryapp.ui.fragment
+package com.example.galleryapp.ui.gallery
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

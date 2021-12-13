@@ -1,4 +1,4 @@
-package com.example.galleryapp.ui.fragment
+package com.example.galleryapp.ui.gallery
 
 import android.os.Bundle
 import android.view.Menu
@@ -8,13 +8,16 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.galleryapp.R
+import com.example.galleryapp.data.UnSplashPhotoModel
 import com.example.galleryapp.databinding.FragmentGalleryBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class GalleryFragment : Fragment(R.layout.fragment_gallery) {
+class GalleryFragment : Fragment(R.layout.fragment_gallery),
+    UnSplashPhotoAdapter.OnItemClickListener {
 
     private val viewModel by viewModels<GalleryViewModel>()
     private var _binding: FragmentGalleryBinding? = null
@@ -23,7 +26,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentGalleryBinding.bind(view)
-        val adapter = UnSplashPhotoAdapter()
+        val adapter = UnSplashPhotoAdapter(this)
 
         binding.apply {
             FGalleryRv.setHasFixedSize(true)
@@ -62,6 +65,11 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
         }
 
         setHasOptionsMenu(true)
+    }
+
+    override fun onClick(photoModel: UnSplashPhotoModel) {
+        val action = GalleryFragmentDirections.actionGalleryFragmentToDetailsFragment(photoModel)
+        findNavController().navigate(action)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

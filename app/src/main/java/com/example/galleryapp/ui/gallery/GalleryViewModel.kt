@@ -1,4 +1,4 @@
-package com.example.galleryapp.ui.fragment
+package com.example.galleryapp.ui.gallery
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
