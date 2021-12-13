@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/GalleryApp/app/src/main/res/drawable/ic_error.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/GalleryApp/app/src/main/res/drawable/ic_search.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/GalleryApp/app/src/main/res/layout/fragment_gallery.xml" value="0.16666666666666666" />
         <entry key="..\:/AndroidStudioProjects/GalleryApp/app/src/main/res/layout/unsplash_photo_load_state_footer.xml" value="0.17481884057971014" />
+        <entry key="..\:/AndroidStudioProjects/GalleryApp/app/src/main/res/menu/menu_gallery.xml" value="0.1796875" />
       </map>
     </option>
   </component>
