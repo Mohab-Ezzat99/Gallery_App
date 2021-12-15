@@ -11,10 +11,6 @@ import com.example.galleryapp.R
 import com.example.galleryapp.data.UnSplashPhotoModel
 import com.example.galleryapp.databinding.ItemUnsplashPhotoBinding
 
-//because web issue
-private const val PHOTO_URL =
-    "https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY"
-
 class UnSplashPhotoAdapter(private val listener: OnItemClickListener) :
     PagingDataAdapter<UnSplashPhotoModel, UnSplashPhotoAdapter.UnSplashPhotoViewHolder>(
         PHOTO_COMPARATOR
@@ -45,7 +41,7 @@ class UnSplashPhotoAdapter(private val listener: OnItemClickListener) :
         fun bind(model: UnSplashPhotoModel) {
             binding.apply {
                 Glide.with(itemView)
-                    .load(PHOTO_URL)
+                    .load(UnSplashPhotoModel.PHOTO_URL)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .error(R.drawable.ic_error)
                     .into(imageView)

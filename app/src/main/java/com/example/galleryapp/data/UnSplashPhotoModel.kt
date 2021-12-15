@@ -11,6 +11,12 @@ data class UnSplashPhotoModel(
     val user: UnSplashUser
 ) : Parcelable {
 
+    companion object {
+        //because web issue
+        const val PHOTO_URL =
+            "https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY"
+    }
+
     @Parcelize
     data class UnSplashPhotoUrl(
         val raw: String,

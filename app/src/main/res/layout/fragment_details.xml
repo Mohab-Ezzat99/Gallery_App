@@ -53,4 +53,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/FDetails_tv_failed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Loading failed!"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone"
+        tools:visibility="visible" />
 </FrameLayout>
