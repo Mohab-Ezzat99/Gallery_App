@@ -3,9 +3,9 @@ Gallery is an Android app developed for displaying images from unsplash website.
 
 # Tools
 
-Kotlin
+Kotlin & Material design
 
-Material design & Intuit library for supporting multi-screens
+Intuit library for supporting multi-screens
 
 Android Jetpack (LiveData, ViewModel, DataBinding, Paging & Navigation)
  
@@ -13,4 +13,4 @@ Android Jetpack (LiveData, ViewModel, DataBinding, Paging & Navigation)
 
 # APK
 
-https://drive.google.com/file/d/1vWOuNr_yVZ-gm1ZzKayfD0LIVcS712gD/view?usp=drivesdk
+https://drive.google.com/file/d/1DkdO57vJ3RboWe0nhiBqf_vfmTXJzviK/view?usp=sharing
